@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="Dao.TestMapper">
+    <resultMap id="BaseResultMap" type="Entity.Test">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="tname" property="tname" jdbcType="VARCHAR"/>
+        <result column="pid" property="pid" jdbcType="INTEGER"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id,tname
+  </sql>
+    <insert id="insert">
+        insert into test (tname)
+        values
+        <foreach collection="list" item="item" index="index" separator=",">
+            (pid,#{item,jdbcType=VARCHAR})
+        </foreach>
+    </insert>
+
+</mapper>

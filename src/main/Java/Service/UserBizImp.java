@@ -12,10 +12,17 @@ public class UserBizImp implements IUserBiz {
 
     @Autowired
     private UsersMapper usersMapper;
+    @Autowired
+    private TestMapper testMapper;
 
     @Override
     public Users findUserByPhone(String phone) {
         return usersMapper.findByPhone(phone);
+    }
+
+    @Override
+    public int insert(List ttt) {
+        return  testMapper.insert(1,ttt);
     }
 
 //    @Override

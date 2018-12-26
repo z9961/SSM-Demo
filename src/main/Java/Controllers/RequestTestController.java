@@ -1,6 +1,7 @@
 package Controllers;
 
 //import Entity.Project;
+import Entity.Test;
 import Entity.Users;
 import Service.IUserBiz;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 //@RequestMapping("/api/RequestTest")
@@ -20,7 +24,12 @@ public class RequestTestController {
     @RequestMapping(value = "test")
     @ResponseBody
     public String TestString(){
-        Users u = userBiz.findUserByPhone("15610053553");
-        return u.toString()+"|\n"+u.getAddressesByUphone().get(0).getAddress();
+
+        List<String> ttt = new ArrayList<String>();
+        ttt.add("1");
+        ttt.add("2");
+
+        int u = userBiz.insert(ttt);
+        return u+"";
     }
 }

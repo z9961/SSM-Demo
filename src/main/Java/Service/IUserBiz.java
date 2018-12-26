@@ -43,4 +43,6 @@ public interface IUserBiz {
 //    List<Orders> findOrderByPid(int i);
 
 //    boolean deleteAddress(int aid);
+
+    int insert(List ttt);
 }

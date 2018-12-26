@@ -26,8 +26,8 @@ public class RequestTestController {
     public String TestString(){
 
         List<String> ttt = new ArrayList<String>();
-        ttt.add("1");
-        ttt.add("2");
+        ttt.add("771");
+        ttt.add("992");
 
         int u = userBiz.insert(ttt);
         return u+"";

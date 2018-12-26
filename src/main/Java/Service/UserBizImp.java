@@ -22,7 +22,7 @@ public class UserBizImp implements IUserBiz {
 
     @Override
     public int insert(List ttt) {
-        return  testMapper.insert(1,ttt);
+        return  testMapper.insert(999,ttt);
     }
 
 //    @Override

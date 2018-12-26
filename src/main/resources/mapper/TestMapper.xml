@@ -10,10 +10,10 @@
     id,tname
   </sql>
     <insert id="insert">
-        insert into test (tname)
+        insert into test (pid,tname)
         values
-        <foreach collection="list" item="item" index="index" separator=",">
-            (pid,#{item,jdbcType=VARCHAR})
+        <foreach collection="param2" item="item" index="index" separator=",">
+            (#{param1},#{item,jdbcType=VARCHAR})
         </foreach>
     </insert>
 
